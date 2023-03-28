@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixGo – Online Movies, TV Shows & Cinema</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FlixGo Demo">
+    <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
+    <meta name="author" content="Alaa almasri">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/Responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+      <div class="reposnivlinks">
+        <ul class=" responsivemenu mr-2 pt-4">
+          <li><i class='fa fa-search icon-material-search  searchicon' aria-hidden="true "></i> </li>
+          <li class="nav-link"><a class="white" href="#">En</a></li>
+          <li><button class="btn btnsignin my-2 my-sm-0" type="submit">sign in</button></li>
+      </ul>
+      </div>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <a class="navbar-brand" href="#"><img src="./images/logo.svg"></a>
+            
+            <a class="navbar-toggler collapsed  border-0" type="button" data-toggle="offcanvas"  data-target="#navbarsExampleDefault">
+          <!-- these spans become the three lines -->
+          <span> </span>
+          <span> </span>
+          <span> </span>
+      </a>
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home  <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Resources                </a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">About Us</a>
+                  <a class="dropdown-item" href="#">Pricing Plan</a>
+                  <a class="dropdown-item" href="#">Help Center</a>
+                </div>
+              </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Legal
+                </a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownMenuLink2">
+                  <a class="dropdown-item" href="#">Terms of Use
+                  </a>
+                  <a class="dropdown-item" href="#">Privacy Policy</a>
+                  <a class="dropdown-item" href="#">Security</a>
+                </div>
+              </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Help </a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0   ">
+                <ul class="d-flex menu2 mr-2 pt-4">
+                    <li><i class='fa fa-search icon-material-search  searchicon' aria-hidden="true "></i> </li>
+                    <li class="nav-link"><a class="white" href="#">En</a></li>
+                    <li><button class="btn btnsignin my-2 my-sm-0" type="submit">sign in</button></li>
+                </ul>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="seachdiv">
+          <div class="container">
+            <input type="text" class="form-control seachinput" placeholder="I'm looking for..." aria-label="I'm looking for..." aria-describedby="basic-addon2">
+            <button class="btn btnseach my-2 my-sm-0" type="submit">Search</button>
+
+          </div>
+        </div>
+    </header>
+    <section>
+      <div  class="movies">
+      <div  id="posterbackground">
+      </div>
+        <div class="newrelases" >
+            <div class="container">
+            <div class="newrelasesContent">
+                <h2 class="mb-5">NEW ITEMS OF THIS SEASON</h2>
+                <div class="releaseitems" id="releaseitems">
+                </div>
+                <div id="owl-demo" class="owl-carousel owl-theme">
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
+    <section >
+      <div class="cinemafilter">
+        <div class="container">
+          <h2 class="pt-3">New Items</h2>
+          <div  class="categories">
+            <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="Trending-tab" data-toggle="tab" data-target="#Trending" type="button" role="tab" aria-controls="Trending" aria-selected="true">Trending</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="SERIES-tab" data-toggle="tab" data-target="#SERIES" type="button" role="tab" aria-controls="SERIES" aria-selected="false">TV SERIES</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="CARTOONS-tab" data-toggle="tab" data-target="#CARTOONS" type="button" role="tab" aria-controls="CARTOONS" aria-selected="false">CARTOONS</button>
+              </li>
+            </ul>
+        
+          </div>
+       
+        </div>
+      </div>
+      <div class="container tabs mt-5">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Trending" role="tabpanel" aria-labelledby="Trending-tab">
+        </div>   
+        <div class="tab-pane fade" id="SERIES" role="tabpanel" aria-labelledby="SERIES-tab">
+          </div>
+          <div class="tab-pane fade" id="CARTOONS" role="tabpanel" aria-labelledby="CARTOONS-tab">
+          </div>
+      </div>
+    </div>
+    </section>
+    <section>
+      <div class="booking" >
+        <div class="container">
+          <h1 class="pt-5">Booking</h1>
+        <span class="white">Please Select  a Movie To reserve A seat</span>
+          <div id="owl-demo2" class="owl-carousel owl2 owl-theme">
+
+          </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">BOOKING</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="move-container">
+              <h1 id="movieName"></h1>
+              <div class="moviedate">
+                <label> date:</label>
+                <br>
+                <input type="date"  class="form-control mb-3" id="birthdaytime" name="birthdaytime">
+              </div>
+            
+<div class="movietime">
+  <label>Time Shcadule:</label>
+  <select id="movietimesachudle" class=" form-control mb-3">
+    <option value="9:30-10:20">9:30-10:20</option>
+    <option value="10:20-11:10">10:20-11:10</option>
+    <option value="11:10-12:00">11:10-12:00</option>
+    <option value="12:00-12:40">12:00-12:40</option>
+    <option value="12:40-1:30">12:40-1:30</option>
+    <option value="1:30-2:20">1:30-2:20</option>
+    <option value="2:20-3:10">2:20-3:10</option>
+    <option value="3:10-4:00">3:10-4:00</option>
+  </select>
+</div>
+</div>
+              
+              <label> movie experince:</label>
+              <select id="movie" class=" form-control mb-3">
+                <option value="9">2d</option>
+                <option value="12">3d</option>
+                <option value="15">iMAX</option>
+                <option value="16">5k</option></select>
+            </div>
+            <ul class="showcase">
+              <li>
+                <div class="seat"></div>
+                <small>Available</small>
+              </li>
+              <li>
+                <div class="seat selected"></div>
+                <small>Selected</small>
+              </li>
+              <li>
+                <div class="seat occupied"></div>
+                <small>Occupied</small>
+              </li>
+            </ul>
+        
+            <div class="container">
+              <div class="screen"></div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+              </div>
+              <div class="row justify-content-center ">
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+              </div>
+            </div>
+        <div class="container">
+          <p class="text text pt-3">
+            You have selected <span id="count">0</span> seats for the price of $<span
+              id="total"
+              >0</span
+            >!
+          </p>
+        </div>
+           
+            <div class="modal-footer  justify-content-center ">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary order">Save changes</button>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="ourpartners mt-5">
+        <div class="container">
+        <div class="section-title">
+          <h1>Our Partners</h1>
+        </div>
+        <div class="section-breif">
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.          </p>
+        </div>
+        <div id="partners">
+          <div class="row mt-5 mb-5" id="partnersitems">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row mt-5">
+          <div  class="col-12 col-lg-3 mb-3">
+            <h6 class="white">Download Our App</h6>
+            <ul class="application">
+              <li><a href="#"><img src="./images/Download_on_the_App_Store_Badge.svg"></a></li>
+              <li><a href="#"><img src="./images/google-play-badge.png"></a></li>
+
+            </ul>
+          </div>
+          <div  class="col-6 col-lg-3 mb-3">
+            <h6 class="white">Resources
+            </h6>
+<ul class="footerlinks">
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Pricing Plan</a></li>
+  <li><a href="#">Help Center</a></li>
+
+</ul>
+          </div>
+          <div  class="col-6 col-lg-3 mb-3">
+            <h6 class="white">Legal</h6>
+            <ul class="footerlinks">
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Security</a></li>
+            
+            </ul>
+          </div>
+          <div  class="col-3 col-lg-3 mb-3">
+            <h6 class="white">Contact
+            </h6>
+          <span><a href="#">8 800 234 56 78</a></span>
+          <span><a href="#">support@Alaaalmasri.com</a></span>
+          <ul class="text-center d-flex socialmeida">
+            <li class="nav-item py-2">
+                <a class="nav-link" href="#" target="_blank"><img src="./images/lin.png"></a>
+            </li>
+            <li class="nav-item py-2">
+                <a class="nav-link" href="#" target="_blank"><img src="./images/twitter.png"></i></a>
+            </li>
+            <li class="nav-item py-2">
+                <a class="nav-link" href="#" target="_blank"><img src="./images/youtube.png"></a>
+            </li>
+            <li class="nav-item py-2">
+                <a class="nav-link" href="#" target="_blank"><img src="./images/fb.png"></a>
+            </li>
+        </ul>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/cinema.js"></script>
+</body>
+</html>
