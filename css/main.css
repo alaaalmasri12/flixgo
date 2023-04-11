@@ -457,6 +457,7 @@ background-color: transparent;
 }
 #owl-demo2 {
     padding-top: 1rem !important;
+    padding-bottom: 2rem;
 }
 .booking-title
 {
@@ -1282,4 +1283,11 @@ input[type=number] {
 .pagination ul li
 {
     padding: 0px 10px;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: TRANSPARENT;
+    border-color: #ff55a5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }

@@ -12,9 +12,9 @@
         height: 376px !important;
         margin-bottom: 15px;
     }
-.movieitem:hover::before {
-    height: 66%;
-}
+    .movieitem:hover::before {
+        height: 276px;
+    }
 .reviewbreif
 {
     display: none;
@@ -89,15 +89,15 @@
 }
 .movie-box:hover::before {
     height: 376px !important;
-    width: 87.5% !important;
+    width: 87.8% !important;
 }
 .tab-content
 {
     margin-top: 20px;
 }
 .booking-box:hover::before {
-    height: 300px !important;
-    width: 100% !important;
+    height: 315px !important;
+    width: 210px;
 }
 .booking-box:hover::after {
    
