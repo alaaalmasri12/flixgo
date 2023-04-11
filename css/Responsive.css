@@ -104,11 +104,27 @@
     left: 20% !important;
     width: 60% !important;
 }
+.itemcontent:hover::before
+{
+    width: 68% !important;
+}
 .btnseach {
     top: 4px !important;  
     right: 9% !important;
 }
 .newrelases .movieitem img {
     height: 277px !important;
+}
+#innerposterbackground 
+{
+    padding-top: 20%;
+}
+.breadcrumpdiv
+{
+    flex-direction: column;
+    margin-top: 50px;
+}
+#tvepisodes {
+    margin-top: 40px !important;
 }
 }

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./css/Responsive.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/range-slider-element@latest/dist/styles.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
 </head>
 <body>
     <header>
@@ -73,7 +75,7 @@
                         <ul class="d-flex menu2 mr-2 pt-4">
                             <li><i class='fa fa-search icon-material-search  searchicon' aria-hidden="true "></i> </li>
                             <li class="nav-link"><a class="white" href="#">En</a></li>
-                            <li><button class="btn btnsignin my-2 my-sm-0" type="submit">sign in</button></li>
+                            <li><a href="./Signin.html" class="btn btnsignin my-2 my-sm-0 white"> sign in</a></li>
                         </ul>
                     </form>
                 </div>
@@ -94,10 +96,10 @@
             <div class="innerposterbackground" id="innerposterbackground">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12 " id="layout">
                             <div class="item-box ml-3">
                                 <h1 class="mb-4" id="Movietitle"></h1>
-                                <div class="detailsmovieImage">
+                                <div class="detailsmovieImage mb-3">
                                     <img id="movieImage" src="">
                                 </div>
                                 <div class="ratingdiv">
@@ -120,10 +122,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12 ">
                             <div class="video">
-                                <iframe  id="trailler" width="100%" height="345" src="">
+                                <iframe  id="trailler" allowfullscreen width="100%" height="345" src="">
                                 </iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div  class="d-none" id="tvepisodes">
+                            <div id="accordion">
+                        
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -153,26 +162,37 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="Reviews" role="tabpanel" aria-labelledby="Reviews-tab">
             <div id="Reviewsitems"></div>
-            
+            <div class="pagination-section d-flex justify-content-center">
+                <li class="page-item next pt-2 pr-2"  id="prev"><a onclick="previousPage()" class="page-link" href="#/"><i class="fa fa-chevron-left" aria-hidden="true"></i> </a></li>
+                <div id="pager"></div>
+                <li class="page-item prev pt-2 pl-2"><a class="page-link" onclick="nextPage()" href="#/"><i class="fa fa-chevron-right" aria-hidden="true"></i> </a></li>
+            </div>
                                 <div class="Commentbox">
-                                <textarea class="form-control" placeholder="Add A comment" rows="5" cols="5"></textarea>
+                                    <div class="titlebox">
+                                        <input type="text" class="form-control mb-3" placeholder="title">
+                                    </div>
+                                <textarea class="form-control" placeholder="Review" rows="5" cols="5"></textarea>
+                                <div class="slidecontainer mt-5">
+                                    <range-slider min="0.1" max="10.0" step="0.1" dir="ltr"></range-slider>
+                                </div>
                                 <div class="submitcomment ml-2 mt-4">
                                     <button type="submit" class="btn">SEND</button>
                                 </div>
                                 </div>
                             </div>   
                             <div class="tab-pane fade" id="Photos" role="tabpanel" aria-labelledby="Photos-tab">
-                                <h2>You may also like..</h2>
-                              </div>
+                                <div class="row" id="photossection">
+                                </div>                
+                            </div>
                             
                           </div>
                     </div>
                     <div class="col-lg-4 col-12">
-                        <h2>You may also like..</h2>
+                        <h5>You may also like...</h5>
                             <div id="similier"></div>
+                            
                     </div>
                 </div>
-            
             </div>
         </div>
         <footer>
@@ -206,6 +226,8 @@
                         </ul>
                     </div>
                     <div class="col-3 col-lg-3 mb-3">
+            
+            
                         <h6 class="white">Contact
                         </h6>
                         <span><a href="#">8 800 234 56 78</a></span>
@@ -232,9 +254,13 @@
         <script src="./node_modules/popper.js/dist/popper.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="./node_modules/owl.carousel/dist/owl.carousel.js"></script>
+        <script src="./script/lightbox/lightbox.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
         <script src="./script/main.js"></script>
+        <script src="https://unpkg.com/range-slider-element@latest"></script>
+        <script>
+        </script>
     </body>
 
 </html>

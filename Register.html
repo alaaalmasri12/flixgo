@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixGo – Register</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FlixGo Demo">
+    <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
+    <meta name="author" content="Alaa almasri">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/Responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
+</head>
+<body>
+    <section>
+        <div class="signup section-bg">
+            <div class="signup-box">
+                <div class="signup-logo pt-5">
+                    <a href="./index.html">
+                        <img src="./images/logo.svg">
+                    </a>
+                </div>
+                <div class="signup-form mt-4">
+                    <div class="container">
+                        <form method="post">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control mb-3" name="name" placeholder="name">
+                                <div class="validationerror text-left">
+                                    <span class="d-none" id="usernamevaldation" style="color:red">Invalid
+                                        UserName</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-control mb-3" name="email"
+                                    placeholder="email">
+                                <div class="validationerror text-left">
+                                    <span class="d-none" id="emailvaldation" style="color:red">Invalid Email</span>
+                                    <span   id="emailexistvaldation" class="emailexistvaldation emailexistvaldationhidden" style="color:red">Email Already
+                                        exist</span>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="password" class="form-control mb-3" name="password"
+                                    placeholder="password">
+                                <div class="validationerror text-left">
+                                    <span class="d-none"  id="Passwordvaldation" style="color:red">Invalid
+                                        password</span>
+                                </div>
+
+                            </div>
+                            <div class="form-check pl-4 text-left">
+                                <label class="container">
+                                    <span class="lightgray">I agree to the </span><a href="#">Privacy Policy</a>
+                                    <input type="checkbox" id="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <input type="submit" class="innerbtnsignup mt-3" style="border: 1px solid transparent;"
+                                value="Sign up">
+                        </form>
+                        <div class="signupdiv mb-4 mt-4">
+                            <span class="lightgray">Already have an account?<a href="./Signin.html">Sign in!</a></span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./script/lightbox/lightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="./script/firebase.js"></script>
+    <script>
+
+        $(".innerbtnsignup").click(function (e) {
+            e.preventDefault();
+            var dbref = firebase.database().ref();
+            var user = dbref.child("login");
+            var username = document.getElementById("name").value;
+            var email = document.getElementById("email").value
+            var password = document.getElementById("password").value;
+            var emailexist;
+
+            dbref.on('child_added', function (snapshot) {
+                snapshot.forEach(function (childSnapshot) {
+                    var childData = childSnapshot.val();
+                    if (childData.email == email) {
+                        emailexist = true;
+                        $("#emailexistvaldation").removeClass("emailexistvaldationhidden");
+                        return;
+                    }
+                    else {
+                        $("#emailexistvaldation").addClass("emailexistvaldationshow");
+
+                        emailexist = false;
+                    }
+                });
+                if(emailexist==true)
+                {
+                    $("#emailexistvaldation").addClass("emailexistvaldationshow");
+
+                }
+                else
+                {
+                    $("#emailexistvaldation").removeClass("emailexistvaldationshow");
+                    $("#emailexistvaldation").addClass("emailexistvaldationhidden");
+
+                }
+              
+                if (isUserNameValid(username) == false) {
+                    $("#usernamevaldation").removeClass("d-none");
+
+                }
+                else {
+                    $("#usernamevaldation").addClass("d-none");
+
+                }
+                if (isEmailValid(email) == false) {
+                    $("#emailvaldation").removeClass("d-none");
+
+                }
+                else {
+                    $("#emailvaldation").addClass("d-none");
+
+                }
+                if (isPasswordValid(password) == false) {
+                    $("#Passwordvaldation").removeClass("d-none");
+
+                }
+                else {
+                    $("#Passwordvaldation").addClass("d-none");
+
+                }
+                if (isUserNameValid(username) == true && isEmailValid(email) == true && isPasswordValid(password) == true && emailexist==false)  {
+                    user.push({
+                        "username": username,
+                        "email": email,
+                        "password": password
+                    })
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        position: 'center',
+                        title: 'user has been registred',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    document.getElementById("name").value="";
+                    document.getElementById("email").value="";
+                    document.getElementById("password").value="";
+                    setTimeout(function(){
+window.location.href="./Signin.html";
+                    },2000)
+                }
+            })
+
+
+        })
+
+        function isUserNameValid(username) {
+            const usernameres = /^[a-z0-9_\.]+$/.exec(username);;
+            const valid = !!usernameres;
+            return valid;
+        }
+
+        function isEmailValid(email) {
+            const emailres = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.exec(email);
+            const valid = !!emailres;
+            return valid;
+        }
+        function isPasswordValid(password) {
+            const passwordres = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/.exec(password);
+            const valid = !!passwordres;
+            return valid;
+        }
+    </script>
+</body>
+
+</html>

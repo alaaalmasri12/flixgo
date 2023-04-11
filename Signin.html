@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixGo – Sign in</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FlixGo Demo">
+    <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
+    <meta name="author" content="Alaa almasri">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/Responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
+</head>
+<body>
+    <section>
+        <div class="Signin section-bg">
+            <div class="signin-box">
+                <div class="singin-logo pt-5">
+                    <a href="./index.html">
+                        <img src="./images/logo.svg">
+                    </a>
+                </div>
+                <div class="signin-form mt-4">
+                    <div class="container">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" id="login" class="form-control mb-3" name="Email"
+                                    placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password"  id="password" class="form-control mb-3" name="password"
+                                    placeholder="password">
+                            </div>
+                            <div class="form-check pl-4 text-left">
+                                
+                                <label class="container"><span class="lightgray">Remember Me</span>
+                                    <input type="checkbox" id="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                  </label>
+                             
+                            </div>
+                            <div class="form-check">
+                                <label class="container text-left"><span class="lightgray">show Password</span>
+                                    <input type="checkbox" style="visibility:hidden;" class="lightgray"  onclick="showpassword()">
+                                    <span class="checkmark"></span>
+                                  </label>
+                            </div>
+                            <input type="submit" class="innerbtnsignin mt-3" style="border: 1px solid transparent;" value="Sign in">
+                        </form>
+                        <div class="signupdiv  mb-4 mt-4">
+                            <span class="lightgray">Don't have an account? <a href="./Register.html">Sign up!</a></span>
+
+                        </div>
+                        <div id="formFooter">
+                            <a class="underlineHover" href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="./script/lightbox/lightbox.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/cinema.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function showpassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+</body>
+
+</html>
