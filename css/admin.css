@@ -73,9 +73,9 @@ p
     float: left;
 }
 
-.user-deatils span
-{
+.user-deatils span {
     color: #ffffff8c !important;
+    font-size: 10px;
 }
 .user {
     display: flex;
@@ -232,4 +232,281 @@ p
     margin-right: 35px;
     position: relative;
     right: 14px;
+}
+.box-icon i {
+    font-size: 35px;
+    color: #ff5681;
+}
+.pinkicon
+{
+    font-size: 12px;
+    color: #ff5681;
+}
+.dashboxtitle {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff12;
+    padding-bottom: 15px;
+}
+.dashboxwrap a {
+    color: #ffffff7a;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.dashboxwrap a:hover{
+color: #ff55a5
+;
+}
+.dashboxmore 
+{
+    background: #333338;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+.dashbox {
+    background-color: #28282d;
+    padding: 15px 15px;
+    width: 94%;
+}
+.table thead th {
+    border-bottom: 1px solid #dee2e626 !important;
+    font-size: 12px;
+}
+.table th, .table td {
+    border-top: 1px solid transparent !important;
+}
+td
+{
+    color: #fff;
+    border:0;
+}
+th
+{
+    color: #ffffff7a;
+}
+.status
+{
+    color: #5bceae;
+}
+header
+{
+    display: none;
+}
+.responsivemenu 
+  {
+      display: none;
+  }
+ /* Define the shape and color of the hamburger lines */
+.navbar-toggler span {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+.offcanvas-collapse {
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    padding-top: 15px;
+    right: 100%;
+    text-align: left;
+    width: 60%;
+    padding-right: 1rem;
+    z-index: 999999999;
+    padding-left: 1rem;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(0%);
+}
+.offcanvas-collapse.open {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(22rem);
+}
+
+.additem-section {
+    background-color: #28282d;
+    padding: 50px;
+}
+#Coverimage {
+    height: 368px;
+    opacity: 0;
+    width: 100%;
+    position: relative;
+    z-index: 999999999;
+    cursor: pointer;
+}
+.uploader {
+    background-color: #2b2b31;
+    width: 270px;
+    height: 400px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: 1s ease;
+    background-size: 270px 400px;
+    background-repeat: no-repeat;
+    position: relative;
+    right: 35px;
+}
+.uploader:hover .formimg-upload   {
+  color: #fff;
+}
+.uploader:hover    {
+    color: #fff;
+    border-color: #ff55a5;
+  }
+  .formimg-upload {
+    transition: 1s ease;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: -25px;
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    z-index: 2;
+    cursor: pointer;
+    margin: 0;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.item-title input,.item-description textarea,.item-Releaseyear input,.item-duration input,.item-age input
+{
+    background: #2b2b31;
+    padding: 25px 15px;
+    color: #495057 !important;
+
+    border: 1px solid transparent;
+}
+.item-qulity select {
+    color: #495057 !important;
+    border: 1px solid transparent;
+    background: #2b2b31;
+    height: 55px;
+}
+.country select,.item-genra select
+{
+    color: #495057 !important;
+    border: 1px solid transparent;
+    background: #2b2b31; 
+    height: 55px; 
+}
+.dropdown-toggle:hover
+{
+  background-color: transparent;  
+}
+.dropdown-toggle:hover
+{
+    border-color: #ff55a5;
+}
+
+
+.dropdown-menu a {
+    color: #fff;
+    padding: 2px 10px;
+}
+.item-qulity select:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    display: block;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+}
+.item-Releaseyear input
+{
+    width: 300px;
+}
+.item-title input:hover,.item-description textarea:hover,.item-Releaseyear input:hover,.item-duration input:hover,.item-age input:hover,.item-qulity select:hover,.country select:hover,.item-genra select:hover
+{
+    color: #495057 !important;
+    background-color: TRANSPARENT;
+    border-color: #ff55a5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+} 
+.item-title input:focus,.item-description textarea:focus,.item-Releaseyear input:focus,.item-duration input:focus,.item-age input:focus,.item-qulity select:focus,.country select:focus ,.item-genra select:focus{
+    color: #495057;
+    background-color: TRANSPARENT;
+    border-color: #ff55a5;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #ff55a5;
+    text-decoration: none;
+    background-color: transparent
+}
+.item-qulity .dropdown-item:hover
+{
+    color: #ff55a5;
+
+    background-color: transparent;
+}
+.btn-secondary:focus, .btn-secondary.focus
+{
+    background-color: transparent !important;
+    border-color: transparent !important;
 }

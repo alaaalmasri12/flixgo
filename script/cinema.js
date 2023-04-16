@@ -116,11 +116,11 @@ $(".minus").on("click", function (e) {
     updateSelectedCount("minus");
   }
 })
-$(".applycoupon").on("click", function () {
-  var codetext = String(code.value).toLowerCase();
-  var precentage = 20;
-  if (codetext == "knowledge academy") {
-    localStorage.setItem("disscount", precentage);
-  }
-  updateSelectedCount();
-})
+// $(".applycoupon").on("click", function () {
+//   var codetext = String(code.value).toLowerCase();
+//   var precentage = 20;
+//   if (codetext == "knowledge academy") {
+//     localStorage.setItem("disscount", precentage);
+//   }
+//   updateSelectedCount();
+// })

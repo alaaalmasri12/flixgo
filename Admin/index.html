@@ -15,16 +15,84 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/adminresponsive.css">
     <link rel="stylesheet" href="../node_modules/lightbox/dist/bundle-main.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <header>
+          <div class="">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+              <a class="navbar-brand" href="#"><img src="../images/logo.svg"></a>
+      
+              <a class="navbar-toggler collapsed  border-0" type="button" data-toggle="offcanvas"
+                data-target="#navbarsExampleDefault">
+                <!-- these spans become the three lines -->
+                <span> </span>
+                <span> </span>
+                <span> </span>
+              </a>
+            </nav>
+          </div>
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+
+          <div class="responsivesidemenu">
+            <div class="adminlogo">
+                <a href="#">
+                    <img src="../images/logo.svg">
+                </a>
+            </div>
+            <div class="user pt-3 pb-3">
+                <div class="user-image">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </div>
+                <div class="user-deatils">
+                    <span>Admin</span>
+                    <h6>John Doe</h6>
+                </div>
+                <div class="signout pt-2">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="sidemenu-links">
+                <ul>
+                    <li class="active"><a href="./index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                            Dashboard</a></li>
+                    <li><a href=""><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                    <li><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                    <li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                    <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                    <li><a href="#" id="responsivenav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                    </li>
+                    <div class="pages-dropdown">
+                        <ul>
+                            <li><a href="add-item.html">Add item</a></li>
+                            <li><a href="edit-user.html">Edit user</a></li>
+                            <li><a href="signin.html">Sign In</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li><a href="forgot.html">Forgot password</a></li>
+                            <li><a href="404.html">404 Page</a></li>
+                        </ul>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="copyrights">
+                <div class="container">
+                    <span>© FlixGo,2023</span>
+                    <br>
+                    <span>Create by Alaa almasri</span>
+                </div>
+            </div>
+        </div>
+        </div>
+      </header>
     <section>
         <div class="row m-0">
             <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 p-0">
-                <div class="sidemenu">
+                <div class="sidemenu ">
                     <div class="adminlogo">
                         <a href="#">
                             <img src="../images/logo.svg">
@@ -39,7 +107,7 @@
                             <h6>John Doe</h6>
                         </div>
                         <div class="signout pt-2">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="sidemenu-links">
@@ -81,49 +149,304 @@
                             <p>Dashboard</p>
                         </div>
                         <div class="additembtn">
-                            <a href="./additem.html" class="btn additem my-2 my-sm-0 white">Add Item</a>
+                            <a href="./add-item.html" class="btn additem my-2 my-sm-0 white">Add Item</a>
                         </div>
                     </div>
                     <div class="dashbored-items">
                     <div class="row m-0">
                         
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mt-5">
+                        <div class="col-lg-3 col-6 mt-5">
                             <div class="dashbored-box">
                                 <div class="box-content pt-4 pl-3">
                                     <span>Unique views this month</span>
-                                    <div class="viewscount pt-3">
-                                        <h2>5 678</h2>
-                                    </div>
-                                    <div class="box-icon">
-
+                                    <div class="d-flex" style="justify-content: space-between;padding-right: 25px;">
+                                        <div class="viewscount pt-3">
+                                            <h2>5 678</h2>
+                                        </div>
+                                        <div class="box-icon pt-3">
+                                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mt-5">
+                        <div class="col-lg-3 col-6 mt-5">
                             <div class="dashbored-box">
                                 <div class="box-content pt-4 pl-3">
                                     <span>Items added this month</span>
+                                    <div class="d-flex" style="justify-content: space-between;padding-right: 25px;">
+                                        <div class="viewscount pt-3">
+                                            <h2>172</h2>
+                                        </div>
+                                        <div class="box-icon pt-3">
+                                            <i class="fa fa-film" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mt-5">
+                        <div class="col-lg-3 col-6 mt-5">
                             <div class="dashbored-box">
                                 <div class="box-content pt-4 pl-3">
-
                                     <span>New comments</span>
+                                    <div class="d-flex" style="justify-content: space-between;padding-right: 25px;">
+                                        <div class="viewscount pt-3">
+                                            <h2>2 573 </h2>
+                                        </div>
+                                        <div class="box-icon pt-3">
+                                            <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mt-5">
+                        <div class="col-lg-3 col-6 mt-5">
                             <div class="dashbored-box">
                                 <div class="box-content pt-4 pl-3">
-
                                     <span>New reviews</span>
+                                    <div class="d-flex" style="justify-content: space-between;padding-right: 25px;">
+                                        <div class="viewscount pt-3">
+                                            <h2>1 021</h2>
+                                        </div>
+                                        <div class="box-icon pt-3">
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+                  
+                    <div class="row mt-5 m-0">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-0 mb-3">
+                            <div class="dashbox">
+                            <div class="dashboxtitle">
+                                <p class="white"><i class="fa fa-certificate pinkicon mr-2" aria-hidden="true"></i> Top items</p>
+                                <div class="dashboxwrap pt-2">
+                                    <a class="dashboxrefresh pl-2" href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                    <a class="dashboxmore ml-2" href="catalog.html">View All</a>
+                                </div>
+                            </div>
+                            <table class="table mt-2">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">TITLE</th>
+                                    <th scope="col">CATEGORY</th>
+                                    <th scope="col">RATING</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td >321</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>Movie</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.2</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >54</th>
+                                    <td>Benched</td>
+                                    <td>Movie</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.1</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >670</th>
+                                    <td>Whitney</td>
+                                    <td>TV Series</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.0</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >241</th>
+                                    <td>Blindspotting 2</td>
+                                    <td>TV Series</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">8.9</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >22</th>
+                                    <td>Blindspotting </td>
+                                    <td>TV Series</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">8.9</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3 ">
+                            <div class="dashbox">
+                            <div class="dashboxtitle">
+                                <p class="white"><i class="fa fa-film  mr-2 pinkicon" aria-hidden="true"></i> Latest items
+                                </p>
+                                <div class="dashboxwrap pt-2">
+                                    <a class="dashboxrefresh pl-2" href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                    <a class="dashboxmore ml-2" href="catalog.html">View All</a>
+                                </div>
+                            </div>
+                            <table class="table mt-2">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">TITLE</th>
+                                    <th scope="col">CATEGORY</th>
+                                    <th scope="col">STATUS</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td >321</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>Movie</td>
+                                    <td></i><span class="status">Visible</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >54</th>
+                                    <td>Benched</td>
+                                    <td>Movie</td>
+                                    <td></i><span class="status">Visible</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >670</th>
+                                    <td>Whitney</td>
+                                    <td>TV Series</td>
+                                    <td></i><span class="status">Visible</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >241</th>
+                                    <td>Blindspotting 2</td>
+                                    <td>TV Series</td>
+                                    <td></i><span class="status">Visible</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >22</th>
+                                    <td>Blindspotting </td>
+                                    <td>TV Series</td>
+                                    <td></i><span class="status">Visible</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-0 mb-3">
+                            <div class="dashbox">
+                            <div class="dashboxtitle">
+                                <p class="white"><i class="fa  fa-user-circle-o mr-2 pinkicon" aria-hidden="true"></i> Latest users</p>
+                                <div class="dashboxwrap pt-2">
+                                    <a class="dashboxrefresh pl-2" href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                    <a class="dashboxmore ml-2" href="catalog.html">View All</a>
+                                </div>
+                            </div>
+                            <table class="table mt-2">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">FULL NAME</th>
+                                    <th scope="col">EMAIL</th>
+                                    <th scope="col">USERNAME</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                  <tr>
+                                    <td >23</th>
+                                    <td>John Doe</td>
+                                    <td>email@email.com</td>
+                                    <td>Username</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3 ">
+                            <div class="dashbox">
+                            <div class="dashboxtitle">
+                                <p class="white"><i class="fa fa-star-half-o pinkicon mr-2" aria-hidden="true"></i> Latest reviews
+                                </p>
+                                <div class="dashboxwrap pt-2">
+                                    <a class="dashboxrefresh pl-2" href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+                                    <a class="dashboxmore ml-2" href="catalog.html">View All</a>
+                                </div>
+                            </div>
+                            <table class="table mt-2">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">ITEM</th>
+                                    <th scope="col">AUTHOR</th>
+                                    <th scope="col">RATING</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td >321</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.2</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >54</th>
+                                    <td>Benched</td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.1</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >670</th>
+                                    <td>Whitney</td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">9.0</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >241</th>
+                                    <td>Blindspotting 2</td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">8.9</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >22</th>
+                                    <td>Blindspotting </td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">8.9</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td >22</th>
+                                    <td>Blindspotting </td>
+                                    <td>John Doe</td>
+                                    <td><i class="fa fa-star pinkicon mr-2"></i><span class="ratingtext">8.9</span></td>
+                                  </tr>
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,6 +460,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="../script/main.js"></script>
     <script src="../script/firebase.js"></script>
     <script>
         $("#nav-dropdown").on("click", function () {

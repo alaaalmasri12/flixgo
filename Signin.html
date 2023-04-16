@@ -87,6 +87,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
     <script src="./script/firebase.js"></script>
     <script>
+        localStorage.removeItem("user")
         $(".innerbtnsignin").click(function (e) {
             e.preventDefault();
             $("#uservaldation").addClass("d-none");
@@ -95,7 +96,7 @@
             var email = document.getElementById("email").value
             var password = document.getElementById("password").value;
             var emailexist;
-            var invaliduser;
+            var invaliduser=false;
             var invalidpassword;
             dbref.on('child_added', function (snapshot) {
                 snapshot.forEach(function (childSnapshot) {    
@@ -107,22 +108,31 @@
                         'username': email,
                         'password': password
                     }
+                    $("#uservaldation").addClass("d-none");
+
                         localStorage.setItem("user", user)
                         window.location.href = "./Admin/index.html";
+                        return
 
                     }
-                });
-            
-                    if (invaliduser==false) {
-                        alert("invalid username or password")
+                    
+                
+                });     
+                    
+                  if(localStorage.getItem("user")==null)
+                  {
+                    $("#uservaldation").removeClass("d-none");
+
+                  } 
+                  else
+                  {
+                    $("#uservaldation").addClass("d-none");
+ 
+                  }
+                })
+                if (invaliduser==false) {
                         $("#uservaldation").removeClass("d-none");
                     }
-                    else {
-                        alert("valid username or password")
-                        $("#uservaldation").addClass("d-none");
-
-                    }
-                })
         });
         function showpassword() {
             var x = document.getElementById("password");
