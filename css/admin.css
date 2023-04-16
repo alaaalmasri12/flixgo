@@ -1,0 +1,235 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #2b2b31;
+}
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../Fonts/Ubuntu-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../Fonts/Ubuntu-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+.white
+{
+    color: #fff;
+    
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Ubuntu-Bold';
+    color: #fff;
+}
+p
+{
+    font-family: 'Ubuntu-Regular';
+ 
+}
+.sidemenu {
+    background-color: #28282d;
+    width: 280px;
+    box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 27%);
+    position: fixed;
+    height: 100%;
+}
+.adminlogo
+{
+    padding: 25px 35px;
+
+}
+.adminlogo:before{
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    display: block;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    pointer-events: none;
+    width: 282px;
+}
+
+.user-image i {
+    color: #ff617c;
+    padding: 9px 11px;
+    font-size: 24px;
+}
+.user-image {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    float: left;
+}
+
+.user-deatils span
+{
+    color: #ffffff8c !important;
+}
+.user {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #ffffff12;
+}
+
+.signout 
+{
+    background: #333338;
+    width: 39px;
+    height: 40px;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.signout i {
+    font-size: 18px;
+    color: #fff;
+}
+.sidemenu-links {
+    padding: 20px 30px;
+}
+.sidemenu-links ul
+{
+    list-style-type: none;
+}
+.sidemenu-links .active a
+{
+    color: #ff55a5;
+}
+.sidemenu-links li {
+    padding: 10px 0px;
+}
+.sidemenu-links a
+{
+    color: rgba(255,255,255,0.75);
+}
+.sidemenu-links i
+{
+    padding-right: 10px;
+}
+.sidemenu-links li {
+    padding: 10px 0px;
+}
+.sidemenu-links a
+{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.copyrights span
+{
+    color: rgba(255,255,255,0.5);
+}
+.copyrights {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+.user-deatils
+{
+    margin-right: 25px;
+    margin-left: -15px;
+}
+
+.pages-dropdown {
+    background-color: #2b2b31;
+    display: none;
+    padding: 10px 18px;
+    margin-top: 15px;
+    overflow-y: scroll;
+    height: 195px;
+    border-radius: 4px;
+    border-top: 1px solid #ff55a5;
+}
+  .pages-dropdown::-webkit-scrollbar-track,.collapse 
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #2b2b31;
+}
+
+.pages-dropdown::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #2b2b31;
+}
+
+.pages-dropdown::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-image: linear-gradient(180deg, #ff55a5 0%, #ff5860 100%);
+}
+.sidemenu a{
+    transition: 0.5s ease;
+}
+.sidemenu a:hover
+{
+    color:#ff55a5;
+}
+
+.additem {
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);    color: #fff !important;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+.dashbored-header
+{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+}
+.dashbored-header::before {
+    content: '';
+    border-bottom: 1px solid #ffffff1f;
+    width: 97.5%;
+    position: absolute;
+    top: 80px;
+}
+.header-title p
+{
+    font-size: 30px;
+    color: #fff;
+}
+.dashbored-box {
+    background-color: #28282d;
+    height: 115px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+}
+.dashbored-box::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 16px;
+    right: 0;
+    height: 2px;
+    width: 360px;
+    display: block;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+}
+.box-content span
+{
+    color: #ffffff9e;
+}
+.dashbored-items {
+    margin-right: 35px;
+    position: relative;
+    right: 14px;
+}
