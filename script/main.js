@@ -1,5 +1,9 @@
 
  
+setTimeout(function(){
+$("#loading").addClass("SlowFadeOutLoader");
+},4000)
+    
     var owl;
     owl = $("#owl-demo").owlCarousel({
         navigation: true, // Show next and prev buttons

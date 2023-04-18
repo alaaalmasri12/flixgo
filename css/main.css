@@ -16,11 +16,39 @@
     font-weight: normal;
     font-style: normal;
   }
+  #loading {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block;
+    z-index: 9999999;
+    background-color: rgba(0,0,0,.9);
+}
+.LabelLoading {
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    z-index: 9999999;
+}
+.SlowFadeOutLoader {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2.5s linear;
+}
+#loading-image {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    z-index: 9999999;
+}
   label{
     color: #fff;
   }
   body
   {
+    font-family: 'Ubuntu', sans-serif !important;
     background-color: #2b2b31;
   }
   header {
@@ -322,6 +350,13 @@ background-color: transparent;
 .reviewbreif
 {
     padding-top: 15px;
+}
+.reviewbreif {
+    padding-top: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 .reviewbreif p
 {
@@ -1034,7 +1069,7 @@ list-style-type: none;
 .breadcrumpitem::before {
     content: '';
     position: absolute;
-    right: 76%;
+    right: 80%;
     top: 0;
     width: 40px;
     bottom: 0;
@@ -1298,4 +1333,118 @@ input[type=number] {
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+}
+
+.header-title h1
+{
+    font-size: 36px;
+}
+.aboutussection
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.about-breif p,.about-breif2 p
+{
+    color: rgba(255,255,255,0.7);
+}
+.about-breif2 a
+{
+    color: #ff55a5;
+}
+.about-breif2 a:hover
+{
+    text-decoration: underline;
+}
+.aboutbox-icon i {
+    font-size: 25px;
+}
+.aboutbox-icon {
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 12px;
+    color: #fff;
+    border: 1px solid #0000009e;
+    border-radius: 5px;
+}
+.aboutcontent {
+    float: right;
+    text-align: left;
+    width: 80%;
+}
+.aboutbox-breif p
+{
+    color:rgba(255,255,255,0.7) ;
+}
+.steps-section
+{
+    background-color: #28282d;
+}
+.step-number h2
+{
+    color: #e8548c;
+}
+.step-breif p
+{
+    color: rgba(255,255,255,0.7);
+}
+.plan-type-content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.plan-price h5
+{
+    color: #e8548c;
+}
+.price-plan
+{
+    background-color: #28282D;
+    padding: 21px 25px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.features li {
+    color: rgba(255,255,255,0.7);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #ffffff45;
+}
+.middlepriceplan:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    right: 0;
+    height: 2px;
+    display: block;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    pointer-events: none;
+    width: 92%;
+}
+.features ul
+{
+    padding-left: 15px;
+}
+
+.planbutton {
+    width: 100%;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    color: #fff !important;
+    padding: 11px 39px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+.planbtn a:hover
+{
+    color: #fff !important;
+}
+.features p
+{
+    color: rgba(255,255,255,0.7);
+
 }
