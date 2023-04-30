@@ -1,5 +1,5 @@
 
- 
+
 setTimeout(function(){
 $("#loading").addClass("SlowFadeOutLoader");
 },4000)
@@ -11,7 +11,7 @@ $("#loading").addClass("SlowFadeOutLoader");
         paginationSpeed: 400,
         mouseDrag: false,
         nav: true,
-        items: 4,
+        items: 20,
         loop: true,
         margin: 50,
         navText: ["<i class='fa fa-thin fa-arrow-left'></i>", "<i class='fa fa-thin fa-arrow-right'></i>"],
@@ -36,6 +36,28 @@ $("#loading").addClass("SlowFadeOutLoader");
         nav: true,
         items: 4,
         loop: true,
+        margin: 50,
+        navText: ["<i class='fa fa-thin fa-arrow-left'></i>", "<i class='fa fa-thin fa-arrow-right'></i>"],
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+    $("#owl-demo78").owlCarousel({
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        mouseDrag: true,
+        nav: true,
+        items: 1,
+        loop: false,
         margin: 50,
         navText: ["<i class='fa fa-thin fa-arrow-left'></i>", "<i class='fa fa-thin fa-arrow-right'></i>"],
         responsive: {
@@ -943,8 +965,8 @@ data+=`</tbody>
 
   
     if (url.searchParams.has('ID') && url.searchParams.has('type')) {
-       
         const params = new URL(url).searchParams;
+        
         var itemID = params.get('ID');
         var type = params.get('type');
         getDbItemByID(itemID, type);
@@ -957,6 +979,7 @@ data+=`</tbody>
             getEpisodes(itemID);
 
         }     
+
     }
     else if (url.searchParams.has('query')) {
         const params = new URL(url).searchParams;
@@ -976,28 +999,12 @@ data+=`</tbody>
         getCartoons();
         getCompnies();
         getTrending2();
+        displaystreammovies()
+
     }
 
 
-    $(".fa-search").on("click", function () {
-
-        $(".seachdiv").slideToggle();
-    })
-    $(function () {
-        'use strict'
-
-        $('[data-toggle="offcanvas"]').on('click', function () {
-            $('.offcanvas-collapse').toggleClass('open')
-        })
-
-        $('.navbar-nav>li>.nav-link').on('click', function () {
-            $('#navbarsExampleDefault .offcanvas-collapse').toggleClass('open')
-        })
-    })
-    $(".navbar-toggler").click(function () {
-        $(this).toggleClass("collapsed");
-    })
-
+    
 function displaypager(distinct,currentPage) {
     var pagerdata = `<ul class="pagination justify-content-center">`;
     var numberofpages = Math.floor(distinct.length/ 5);
@@ -1059,6 +1066,48 @@ function displaypager(distinct,currentPage) {
         }
     }
 }
+
+function displaystreammovies()
+{
+    var Data2=``
+    var dbref = firebase.database().ref("Movies")
+    var bookingbox2 = document.createElement("div");
+                        bookingbox2.classList.add("booking-box");
+                        var bookingimagediv2 = document.createElement("div");
+                        bookingimagediv2.classList.add("booking-image");
+    dbref.on('value', function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {  
+            var childData = childSnapshot.val();
+                Data2=`
+                <a href="Moviesstream.html?videoid=${childData.ID}">
+                <div class="streamitem">
+                <div class="stream-image">
+                <img style="border-radius: 10px;" src="${childData.backgroundcover}">
+                </div>
+                <div class="stream-content">
+                <div class="stream-title mt-3">
+                <h5>${childData.itemname}</h5>
+                </div>
+                <div class="stream-relaseyear mb-2">
+                <span class="white">relaseyear: </span> <span style="color:#dd4f7b">${childData.releaseyear}</span>
+                </div>
+                <div class="stream-runningtime mb-2">
+               <span class="white">Runnming time:</span> <span class="white">${childData.runningtime}</span>
+                    </div>
+                    <div class="stream-quility mb-2">
+                    <span class="white">quility: </span><span style="color:#dd4f7b">${childData.quility}</span>
+                        </div>
+                    </div>
+                    </div>
+                    </a>
+            `
+            $('#owl-demo78').owlCarousel('add', Data2).owlCarousel('update');
+
+
+        })
+    });  
+
+}
 var searchResult = [];
 async function searchbyID(query) {
     var data = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=28d102c23a94c950a5f83f4fd7517be8&language=en-US&query=${query}&include_adult=false`)
@@ -1109,40 +1158,6 @@ $('#owl-demo2').on('click', '.owl-item>div', function () {
     // $('#exampleModal').modal('show');
     window.location.href = "Booking.html?title=" + moviename;
 })
-const elements = document.querySelectorAll(['range-slider']);
-elements.forEach(element => {
-    element.insertAdjacentHTML('afterend', `
-<output>5.5</output>
-`);
-});
-$("range-slider").on("change", function (e) {
-    const input = e.target;
-    const output = input.nextElementSibling;
-    if (output) {
-        output.textContent = input.value;
-    }
-
-});
-$('.seachinput').on("keypress", function (e) {
-    var dInput = this.value;
-
-    if (e.keyCode == 13) {
-        window.location.href = "searchResult.html?query=" + dInput;
-    }
-});
-
-$(".btnseach ").on("click",function(){
-    var dInput = $(".seachinput").val();
-    if(dInput !="")
-    {
-        window.location.href = "searchResult.html?query=" + dInput;
-    }
-})
-function scrolltop()
-{
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-
-}
 
 $(".ticketsubmit").on("click", function (e) {
     e.preventDefault();

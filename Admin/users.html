@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixGo – users</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FlixGo Demo">
+    <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
+    <meta name="author" content="Alaa almasri">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon-32x32.png" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/adminresponsive.css">
+    <link rel="stylesheet" href="../node_modules/lightbox/dist/bundle-main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="loading">
+        <span class="LabelLoading" style="color: white; font-size: 18px;">Please Wait</span>
+        <img id="loading-image" src="../images/spinner.gif" alt="Loading..." style="width: 70px">
+    </div>
+    <header>
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="./index.html"><img src="../images/logo.svg"></a>
+
+                <a class="navbar-toggler collapsed  border-0" type="button" data-toggle="offcanvas"
+                    data-target="#navbarsExampleDefault">
+                    <!-- these spans become the three lines -->
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </a>
+            </nav>
+        </div>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+
+            <div class="responsivesidemenu">
+                <div class="adminlogo">
+                    <a href="./index.html">
+                        <img src="../images/logo.svg">
+                    </a>
+                </div>
+                <div class="user pt-3 pb-3">
+                    <div class="user-image">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-deatils">
+                        <span>Admin</span>
+                        <h6>John Doe</h6>
+                    </div>
+                    <div class="signout pt-2">
+                        <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>sidemenu-links
+                </div>
+                <div class="sidemenu-links">
+                    <ul>
+                        <li ><a href="./index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                                Dashboard</a></li>
+                        <li><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                        <li class="active"><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                        <li><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                        <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                        <li><a href="#" id="Responsivenav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                        </li>
+                        <div class="pages-dropdown">
+                            <ul>
+                                <li><a href="add-item.html">Add item</a></li>
+                                <li><a href="edit-user.html">Edit user</a></li>
+                                <li><a href="signin.html">Sign In</a></li>
+                                <li><a href="signup.html">Sign Up</a></li>
+                                <li><a href="forgot.html">Forgot password</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="copyrights">
+                    <div class="container">
+                        <span>© FlixGo,2023</span>
+                        <br>
+                        <span>Create by Alaa almasri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="row m-0  ">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 p-0">
+                <div class="sidemenu ">
+                    <div class="adminlogo">
+                        <a href="./index.html">
+                            <img src="../images/logo.svg">
+                        </a>
+                    </div>
+                    <div class="user pt-3 pb-3">
+                        <div class="user-image">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="user-deatils">
+                            <span>Admin</span>
+                            <h6>John Doe</h6>
+                        </div>
+                        <div class="signout pt-2">
+                            <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="sidemenu-links">
+                        <ul>
+                            <li><a href="./index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                                    Dashboard</a></li>
+                            <li ><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                            <li class="active"><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                            <li><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                            <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                            <li><a href="#" id="nav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                            </li>
+                            <div class="pages-dropdown">
+                                <ul>
+                                    <li><a href="./add-item.html">Add item</a></li>
+                                    <li><a href="../Signin.html">Sign In</a></li>
+                                    <li><a href="../Register.html">Sign Up</a></li>
+                                    <li><a href="../Forgetpassword.html">Forgot password</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                    </div>
+                    <div class="copyrights">
+                        <div class="container">
+                            <span>© FlixGo,2023</span>
+                            <br>
+                            <span>Create by Alaa almasri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="Dashbored mt-4">
+                    <div class="dashbored-header">
+                        <div class="header-title">
+                            <span class="white" style="font-size: 35px;">Users</span> <span class="pl-4"
+                                style="color:rgba(255,255,255,0.75)">3,702  Total</span>
+                        </div>
+                        <div class="catalog-search">
+                            <input type="text" class="form-control seachinput" placeholder="Find User"
+                                aria-label="Find User" aria-describedby="basic-addon2">
+                            <div class="searchicon">
+                                <i class='fa fa-search icon-material-search  searchicon white' aria-hidden="true "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-section mt-5">
+                        <div class="table-responsive">
+                        <table class="table  mt-2">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">BASIC INFO</th>
+                                    <th scope="col">USERNAME</th>
+                                    <th scope="col">PRICING PLAN</th>
+                                    <th scope="col">COMMENTS</th>
+                                    <th scope="col">REVIEWS</th>
+                                    <th scope="col">STATUS</th>
+                                    <th scope="col">CRAETED DATE</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Premium</td>
+                                    <td>13</td>
+                                    <td>1</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Premium</td>
+                                    <td>13</td>
+                                    <td>1</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Free</td>
+                                    <td>2</td>
+                                    <td>5</td>
+
+                                    <td class="statusred">Banned</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Premium</td>
+                                    <td>8</td>
+                                    <td>7</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Free</td>
+                                    <td>10</td>
+                                    <td>13</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Premium</td>
+                                    <td>22</td>
+                                    <td>4</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>321</th>
+                                    <td> <div class="useritem">
+                                        <div class="user-image useritem-image">
+                                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="useritem-deatils">
+                                            <span>John Doe                                            </span>
+                                            <p  style="color:rgba(255,255,255,0.75);font-size: 14px;">email@email.com                                            </p>
+                                        </div>
+                                    </div></td>
+                                    <td><span >Username</span></td>
+                                    <td>Free</td>
+                                    <td>10</td>
+                                    <td>11</td>
+
+                                    <td class="status">Approved</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                            <li class="lock"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal"><i class="fa fa-lock"
+                                                        aria-hidden="true"></i></a></li>
+                                            </li>
+                                            <li class="edit"><a href="#"><i class="fa fa-pencil"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="d-flex mt-4 mb-4 catalognavigation" style="justify-content: space-between;">
+                            <div class="totalcatalogs">
+                                <span>10 from 14 452</span>
+                            </div>
+                            <div class="pagination-section d-flex justify-content-center">
+                                <li class="page-item next pt-2" id="prev"><a class="page-link" href="#/"><i
+                                            class="fa fa-chevron-left" aria-hidden="true"></i> </a></li>
+                                <div id="pager">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item active"><a class="page-link" href="#/">1</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">2</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">3</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">4</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">5</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">6</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">7</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">8</a></li>
+
+                                    </ul>
+                                </div>
+                                <li class="page-item prev pt-2"><a class="page-link" href="#/"><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i> </a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>Status change</h2>
+                    <p class="white pt-3">Are you sure about immediately change status?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary apply">Save changes</button>
+                    <button type="button" class="btn btn-secondary closebtn" data-dismiss="modal">dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>User delete</h2>
+                    <p class="white pt-3">Are you sure to permanently delete this user?                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary apply">Delete</button>
+                    <button type="button" class="btn btn-secondary closebtn" data-dismiss="modal">dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../script/Custom.js"></script>
+</body>
+
+</html>

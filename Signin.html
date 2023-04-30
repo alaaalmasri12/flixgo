@@ -101,16 +101,17 @@
             dbref.on('child_added', function (snapshot) {
                 snapshot.forEach(function (childSnapshot) {    
                     var childData = childSnapshot.val();
-                 console.log(childData.email,"emaillll")
-                 console.log(childData.password,"password")
+                //  console.log(childData.email,"emaillll")
+                //  console.log(childData.password,"password")
                     if (childData.email == email && childData.password == password) {
                         var user = {
+                        'name':childData.name,
                         'username': email,
                         'password': password
                     }
                     $("#uservaldation").addClass("d-none");
 
-                        localStorage.setItem("user", user)
+                        localStorage.setItem("user", JSON.stringify(user))
                         window.location.href = "./Admin/index.html";
                         return
 

@@ -5,6 +5,7 @@
 }
 body {
     background-color: #2b2b31;
+    overflow-x: hidden;
 }
 @font-face {
     font-family: 'Ubuntu-Bold';
@@ -35,17 +36,17 @@ p
 }
 .sidemenu {
     background-color: #28282d;
-    width: 280px;
     box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 27%);
-    position: fixed;
     height: 100%;
+    position: fixed;
+    width: 15%;
 }
 .adminlogo
 {
     padding: 25px 35px;
 
 }
-.adminlogo:before{
+.adminlogo:before {
     content: '';
     position: absolute;
     top: 80px;
@@ -56,7 +57,7 @@ p
     background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
     box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
     pointer-events: none;
-    width: 282px;
+    width: 100%;
 }
 
 .user-image i {
@@ -77,6 +78,7 @@ p
     color: #ffffff8c !important;
     font-size: 10px;
 }
+
 .user {
     display: flex;
     justify-content: space-evenly;
@@ -137,12 +139,6 @@ p
     bottom: 20px;
     width: 100%;
 }
-.user-deatils
-{
-    margin-right: 25px;
-    margin-left: -15px;
-}
-
 .pages-dropdown {
     background-color: #2b2b31;
     display: none;
@@ -199,7 +195,7 @@ p
     border-bottom: 1px solid #ffffff1f;
     width: 97.5%;
     position: absolute;
-    top: 80px;
+    top: 100px;
 }
 .header-title p
 {
@@ -219,7 +215,7 @@ p
     left: 16px;
     right: 0;
     height: 2px;
-    width: 360px;
+    width: 90%;
     display: block;
     background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
     box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
@@ -369,11 +365,11 @@ header
     transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
     -webkit-transform: translateX(100%);
-    transform: translateX(0%);
+    transform: translateX(-14%);
 }
 .offcanvas-collapse.open {
     -webkit-transform: translateX(-1rem);
-    transform: translateX(22rem);
+    transform: translateX(18rem);
 }
 
 .additem-section {
@@ -390,15 +386,14 @@ header
 }
 .uploader {
     background-color: #2b2b31;
-    width: 270px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     border: 1px solid transparent;
     border-radius: 12px;
     transition: 1s ease;
-    background-size: 270px 400px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
-    right: 35px;
 }
 .uploader:hover .formimg-upload   {
   color: #fff;
@@ -475,17 +470,13 @@ header
     background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
     box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
 }
-.item-Releaseyear input
-{
-    width: 300px;
-}
-.item-title input:hover,.item-description textarea:hover,.item-Releaseyear input:hover,.item-duration input:hover,.item-age input:hover,.item-qulity select:hover,.country select:hover,.item-genra select:hover
+
+.item-title input:hover,.item-description textarea:hover,.item-Releaseyear input:hover,.item-duration input:hover,.item-age input:hover,.item-qulity select:hover,.country select:hover,.item-genra select:hover,.imagesuploader:hover,.videouploader:hover
 {
     color: #495057 !important;
     background-color: TRANSPARENT;
     border-color: #ff55a5;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 } 
 .item-title input:focus,.item-description textarea:focus,.item-Releaseyear input:focus,.item-duration input:focus,.item-age input:focus,.item-qulity select:focus,.country select:focus ,.item-genra select:focus{
     color: #495057;
@@ -509,4 +500,343 @@ header
 {
     background-color: transparent !important;
     border-color: transparent !important;
+}
+.imagesuploader, .videouploader {
+    position: relative;
+    background: #2b2b31;
+    padding: 15px 15px;
+    color: #495057 !important;
+    border: 1px solid transparent;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+}
+.imagesuploader input, .videouploader input {
+    position: absolute;
+    height: auto;
+    border-radius: 3px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.uploadcontent
+{
+    display: flex;
+    justify-content: space-between;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 9px solid transparent;
+    border-radius: 100%;
+    background: #df4e93;
+}
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+    padding-right: 15px;
+}
+.itemtype
+{
+    color:rgba(255,255,255,0.5);
+}
+[type="radio"]:not(:checked) + label
+{
+    opacity: 0.5;
+}
+#publish
+{
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    color: #fff !important;
+    padding: 11px 39px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    border: 0;
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    border-radius: 4px;
+}
+.loading {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block;
+    z-index: 9999999;
+    background-color: rgba(0,0,0,.9);
+}
+.LabelLoading {
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    z-index: 9999999;
+    opacity: 0;
+}
+.SlowFadeOutLoader {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2.5s linear;
+}
+#loading-image {
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    z-index: 9999999;
+    opacity: 0;
+}
+.loading #loading-image
+{
+    opacity: 1 !important;
+}
+.loading  .LabelLoading
+{
+    opacity: 1 !important;
+}
+.catalog-search
+{
+    width: 300px;
+    margin-left: auto;
+}
+.catalog-search input
+{
+    transition: 0.5s ease;
+}
+.catalog-search input:hover {
+    border: 1px solid #ff55a5;
+}
+.catalog-search input {
+    position:relative;
+    background-color: #28282d !important;
+    border: 0;
+  
+}
+.searchicon {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+}
+.statusred
+{
+    color: #ff5860;
+}
+
+.catalog-section td {
+    background-color: #28282d;
+    border-bottom: 10px solid #2b2b31;
+}
+.actions ul
+{
+    list-style-type: none;
+}
+.actions ul li
+{
+    display: inline-block;
+    padding: 0px 5px;
+}
+.lock
+{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #2c3537;
+}
+.lock i
+{
+    padding: 5px;
+    color:#5bceae ;
+}
+.eye
+{
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: rgba(255,85,165,0.08)
+}
+.eye i {
+    cursor: pointer;
+    padding: 5px;
+    color: rgba(255,85,165,0.8);
+}
+.edit 
+{
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: rgba(55,150,246,0.08);
+}
+.edit i
+{
+    padding: 5px;
+
+    color: #3796f6;
+}
+.trash
+{
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: rgba(236,84,122,0.08);
+}
+.trash i
+{
+    padding: 5px;
+
+    color: #ec547a;
+}
+.modal-dialog {
+    position: relative;
+    display: block;
+    background-color: #28282d;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 30%);
+    padding: 40px 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.modal-content
+{
+    background-color: transparent !important;
+    border: 0;
+}
+.modal-header, .modal-footer {
+    border-top: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
+    justify-content: center;
+}
+.apply {
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    background-color: transparent;
+    border-color: transparent;
+}
+.apply:hover
+{
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    background-color: transparent;
+    border-color: transparent;
+}
+.closebtn {
+    background-color: rgba(255,255,255,0.05);
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 15%);
+    color: #fff;
+}
+.modal {
+    top: 30% !important;
+    
+}
+.modal-dialog:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    margin: 0 auto;
+    right: 0px;
+    height: 2px;
+    display: block;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+}
+.totalcatalogs {
+    color: rgba(255,255,255,0.5);
+    background-color: #28282d;
+    padding: 10px;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.pagination-section li
+{
+    list-style-type: none;
+}
+.page-link
+{
+color: #fff !important;
+}
+.page-item.active .page-link {
+
+    background-color: transparent !important;
+}
+.pagination .active:hover
+{
+    color: #fff !important;
+}
+.pagination .active {
+    width: 100%;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    color: #fff !important;
+    border-radius: 6px;
+    background-color: transparent;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+.page-link {
+    background-color: #2b2b31 !important;
+    border: 1px solid transparent !important;
+}
+.page-link i
+{
+    color: #fff !important;
+}
+.pagination-section {
+    border: 1px solid #0000001c;
+    padding: 0px 15px;
+    box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 27%);
+    height: 54px;
+}
+.pagination
+{
+    padding-top: 8px;
+}
+.pagination ul li
+{
+    padding: 0px 10px;
+}
+.searchicon i
+{
+    color: rgba(255,255,255) 
+}
+.useritem-image {
+    margin-right: 6px;
 }

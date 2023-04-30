@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixGo – Comments</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="FlixGo Demo">
+    <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
+    <meta name="author" content="Alaa almasri">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon-32x32.png" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/adminresponsive.css">
+    <link rel="stylesheet" href="../node_modules/lightbox/dist/bundle-main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="loading">
+        <span class="LabelLoading" style="color: white; font-size: 18px;">Please Wait</span>
+        <img id="loading-image" src="../images/spinner.gif" alt="Loading..." style="width: 70px">
+    </div>
+    <header>
+        <div class="">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
+                <a class="navbar-brand" href="./index.html"><img src="../images/logo.svg"></a>
+
+                <a class="navbar-toggler collapsed  border-0" type="button" data-toggle="offcanvas"
+                    data-target="#navbarsExampleDefault">
+                    <!-- these spans become the three lines -->
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </a>
+            </nav>
+        </div>
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+
+            <div class="responsivesidemenu">
+                <div class="adminlogo">
+                    <a href="./index.html">
+                        <img src="../images/logo.svg">
+                    </a>
+                </div>
+                <div class="user pt-3 pb-3">
+                    <div class="user-image">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-deatils">
+                        <span>Admin</span>
+                        <h6>John Doe</h6>
+                    </div>
+                    <div class="signout pt-2">
+                        <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="sidemenu-links">
+                    <ul>
+                        <li class="active"><a href=""><i class="fa fa-tachometer" aria-hidden="true"></i>
+                                Dashboard</a></li>
+                        <li><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                        <li><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                        <li  class="active"><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                        <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                        <li><a href="#" id="Responsivenav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                        </li>
+                        <div class="pages-dropdown">
+                            <ul>
+                                <li><a href="./add-item.html">Add item</a></li>
+                                <li><a href="./add-item.html">Edit user</a></li>
+                                <li><a href="../Signin.html">Sign In</a></li>
+                                <li><a href="../Register.html">Sign Up</a></li>
+                                <li><a href="../Forgetpassword.html">Forgot password</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div class="copyrights">
+                    <div class="container">
+                        <span>© FlixGo,2023</span>
+                        <br>
+                        <span>Create by Alaa almasri</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="row m-0  ">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 p-0">
+                <div class="sidemenu ">
+                    <div class="adminlogo">
+                        <a href="./index.html">
+                            <img src="../images/logo.svg">
+                        </a>
+                    </div>
+                    <div class="user pt-3 pb-3">
+                        <div class="user-image">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="user-deatils">
+                            <span>Admin</span>
+                            <h6>John Doe</h6>
+                        </div>
+                        <div class="signout pt-2">
+                            <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="sidemenu-links">
+                        <ul>
+                            <li><a href="./index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                                    Dashboard</a></li>
+                            <li ><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                            <li><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                            <li class="active"><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                            <li><a href="./Reviews.html"><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                            <li><a href="#" id="nav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                            </li>
+                            <div class="pages-dropdown">
+                                <ul>
+                                    <li><a href="./add-item.html">Add item</a></li>
+                                    <li><a href="../Signin.html">Sign In</a></li>
+                                    <li><a href="../Register.html">Sign Up</a></li>
+                                    <li><a href="../Forgetpassword.html">Forgot password</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+
+                    </div>
+                    <div class="copyrights">
+                        <div class="container">
+                            <span>© FlixGo,2023</span>
+                            <br>
+                            <span>Create by Alaa almasri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="Dashbored mt-4">
+                    <div class="dashbored-header">
+                        <div class="header-title">
+                            <span class="white" style="font-size: 35px;">Comments</span> <span class="pl-4"
+                                style="color:rgba(255,255,255,0.75)">21,356  Total</span>
+                        </div>
+                        <div class="catalog-search">
+                            <input type="text" class="form-control seachinput" placeholder="Key word.."
+                                aria-label="Key word.." aria-describedby="basic-addon2">
+                            <div class="searchicon">
+                                <i class='fa fa-search icon-material-search  searchicon white' aria-hidden="true "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-section mt-5">
+                        <div class="table-responsive">
+                        <table class="table  mt-2">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">ITEM</th>
+                                    <th scope="col">AUTHOR</th>
+                                    <th scope="col">TEXT</th>
+                                    <th scope="col">LIKE / DISLIKE</th>
+                                    <th scope="col">CRAETED DATE</th>
+                                    <th scope="col">ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>23</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a  data-toggle="modal"
+                                                data-target="#exampleModal"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>24</th>
+                                    <td>Benched</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>25</th>
+                                    <td>Whitney</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>26</th>
+                                    <td>Blindspotting</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>27</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>28</th>
+                                    <td>Benched</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>29</th>
+                                    <td>Whitney</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>30</th>
+                                    <td>Blindspotting</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>31</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>32</th>
+                                    <td>Benched</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>33</th>
+                                    <td>I Dream in Another Language</td>
+                                    <td>John Doe</td>
+                                    <td>Lorem Ipsum is simply dummy text...</td>
+                                    <td>12 / 7</td>
+                                    <td>24 Oct 2019</td>
+                                    <td class="actions">
+                                        <ul>
+                                          
+                                            <li class="eye"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                            </li>
+                                     
+                                            <li class="trash"><a href="#" data-toggle="modal"
+                                                    data-target="#exampleModal2"><i class="fa fa-trash"
+                                                        aria-hidden="true"></i></li>
+
+                                        </ul>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="d-flex mt-4 mb-4 catalognavigation" style="justify-content: space-between;">
+                            <div class="totalcatalogs">
+                                <span>10 from 14 452</span>
+                            </div>
+                            <div class="pagination-section d-flex justify-content-center">
+                                <li class="page-item next pt-2" id="prev"><a class="page-link" href="#/"><i
+                                            class="fa fa-chevron-left" aria-hidden="true"></i> </a></li>
+                                <div id="pager">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item active"><a class="page-link" href="#/">1</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">2</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">3</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">4</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">5</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">6</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">7</a></li>
+                                        <li class="page-item "><a class="page-link" href="#/">8</a></li>
+
+                                    </ul>
+                                </div>
+                                <li class="page-item prev pt-2"><a class="page-link" href="#/"><i
+                                            class="fa fa-chevron-right" aria-hidden="true"></i> </a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog p-0" role="document" style="max-width: 700px !important;">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="modeluser d-flex pt-3  text-center">
+                        <div class="user-image mr-3">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="user-deatils text-left">
+                            <h6>John Doe</h6>
+                            <p style="color:rgba(255,255,255,0.5);">30.08.2018, 17:53</p>
+                        </div>
+                    </div>
+                    <div class="comment">
+                <p style="color: rgba(255,255,255,0.7);">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div>
+                    <hr style="background-color:#ffffff38;margin: 0px;">
+                </div>
+                <div class="modal-footer" style="justify-content: flex-start;">
+                    <i class="fa fa-thumbs-up" style="color: green;" aria-hidden="true"></i><span class="white">12</span>
+                    <i class="fa fa-thumbs-down" style="color: red;"></i><span class="white">20</span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2>Comment delete</h2>
+                    <p class="white pt-3">Are you sure to permanently delete this comment?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary apply">Delete</button>
+                    <button type="button" class="btn btn-secondary closebtn" data-dismiss="modal">dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="../script/lightbox/lightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script src="../script/firebase.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../script/Custom.js"></script>
+    <script src="../script/Stream.js"></script>
+  
+</body>
+
+</html>

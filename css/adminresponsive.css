@@ -34,8 +34,8 @@ header {
     width: 280px;
     box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 27%);
     position: absolute;
-    height: 750px;
-    left: 0;
+    height: 845px;
+    left: -35px;
     top: -87px;
 }
 .Dashbored 
@@ -47,11 +47,16 @@ header {
     right: 13px !important;
 }
 .dashbored-box::before {
-    top: 3px !important;
-    width: 252px !important;
+    top: 2px !important;
+    width: 84%;
+}
+.dashbored-box
+{
+height: auto !important;
 }
 .dashbored-header::before {
-    width: 96.5% !important;
+    width: 84.5% !important;
+    top: 127px;
 }
 .dashbored-header {
     padding-right: 0px !important;
@@ -63,4 +68,72 @@ header {
 {
     padding: 0px !important;
 }
+.Dashbored  input,.Dashbored  select
+{
+    margin-bottom: 10px;
+}
+.box-icon i {
+    font-size: 20px !important;
+}
+.country select
+{
+    width: 243px !important;
+    margin: 8px auto !important;
+}
+.additem-section {
+    text-align: center;
+}
+.totalcatalogs
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.catalognavigation
+{
+    flex-direction: column !important;
+}
+.actions ul li {
+    display: inline-block;
+    margin: 10px auto !important;
+    padding: 0px 5px;  
+}
+.catalog-search {
+    width: 350px !important;
+}
+.searchicon {
+    right: 21px !important; 
+}
+.offcanvas-collapse.open {
+    transform: translateX(100%);}
+.responsivesidemenu {
+    left: 0px !important;
+}
+.navbar-collapse .responsivesidemenu
+{
+animation: fadeInFromNone 0.5s ease-out;
+
+}
+.open  .responsivesidemenu
+{
+    opacity: 1 !important;
+}
+@keyframes fadeInFromNone {
+    0% {
+      position: absolute;
+      opacity: 0;
+      transform: translateX(-999px);
+    }
+  
+    1% {
+      position: relative;
+      opacity: 0;
+      transform: translateX(0);
+    }
+  
+    100% {
+      position: relative;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }

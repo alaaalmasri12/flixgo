@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlixGo – Admin pannel</title>
+    <title>FlixGo – Add Item</title>
     <meta charset="UTF-8">
     <meta name="description" content="FlixGo Demo">
     <meta name="keywords" content="movies, tv shows, actors,reviews,FlixGo">
@@ -22,10 +22,14 @@
 </head>
 
 <body>
+    <div id="loading" >
+        <span  class="LabelLoading" style="color: white; font-size: 18px;">Please Wait</span>
+        <img id="loading-image" src="../images/spinner.gif" alt="Loading..." style="width: 70px">
+    </div>
     <header>
         <div class="">
             <nav class="navbar navbar-expand-lg navbar-dark ">
-                <a class="navbar-brand" href="#"><img src="../images/logo.svg"></a>
+                <a class="navbar-brand" href="./index.html"><img src="../images/logo.svg"></a>
 
                 <a class="navbar-toggler collapsed  border-0" type="button" data-toggle="offcanvas"
                     data-target="#navbarsExampleDefault">
@@ -53,27 +57,26 @@
                         <h6>John Doe</h6>
                     </div>
                     <div class="signout pt-2">
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="sidemenu-links">
                     <ul>
                         <li class="active"><a href=""><i class="fa fa-tachometer" aria-hidden="true"></i>
                                 Dashboard</a></li>
-                        <li><a href=""><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
-                        <li><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
-                        <li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
-                        <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
-                        <li><a href="#" id="nav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
+                        <li><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                        <li><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                        <li><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                        <li><a href="./Reviews.html"><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                        <li><a href="#" id="Responsivenav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
                         </li>
                         <div class="pages-dropdown">
                             <ul>
-                                <li><a href="add-item.html">Add item</a></li>
-                                <li><a href="edit-user.html">Edit user</a></li>
-                                <li><a href="signin.html">Sign In</a></li>
-                                <li><a href="signup.html">Sign Up</a></li>
-                                <li><a href="forgot.html">Forgot password</a></li>
-                                <li><a href="404.html">404 Page</a></li>
+                                <li><a href="./add-item.html">Add item</a></li>
+                                <li><a href="./add-item.html">Edit user</a></li>
+                                <li><a href="../Signin.html">Sign In</a></li>
+                                <li><a href="../Register.html">Sign Up</a></li>
+                                <li><a href="../Forgetpassword.html">Forgot password</a></li>
                             </ul>
                         </div>
                     </ul>
@@ -114,20 +117,18 @@
                         <ul>
                             <li><a href="./index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>
                                     Dashboard</a></li>
-                            <li><a href=""><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
-                            <li><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
-                            <li><a href=""><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
-                            <li><a href=""><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
+                            <li><a href="./Catalog.html"><i class="fa fa-film" aria-hidden="true"></i> Catalog</a></li>
+                            <li><a href="./users.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Users</a></li>
+                            <li><a href="./Comments.html"><i class="fa fa-comments-o" aria-hidden="true"></i>Comments</a></li>
+                            <li><a href="./Reviews.html"><i class="fa fa-star-half-o" aria-hidden="true"></i>Reviews</a></li>
                             <li><a href="#" id="nav-dropdown"><i class="fa fa-files-o" aria-hidden="true"></i>Pages</a>
                             </li>
                             <div class="pages-dropdown">
                                 <ul>
-                                    <li><a href="add-item.html">Add item</a></li>
-                                    <li><a href="edit-user.html">Edit user</a></li>
-                                    <li><a href="signin.html">Sign In</a></li>
-                                    <li><a href="signup.html">Sign Up</a></li>
-                                    <li><a href="forgot.html">Forgot password</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="./add-item.html">Add item</a></li>
+                                    <li><a href="../Signin.html">Sign In</a></li>
+                                    <li><a href="../Register.html">Sign Up</a></li>
+                                    <li><a href="../Forgetpassword.html">Forgot password</a></li>
                                 </ul>
                             </div>
                         </ul>
@@ -152,54 +153,56 @@
 
                     </div>
                     <div class="additem-section mt-5">
+                        <form id="myform" onsubmit="event.preventDefault()">
                         <div class="row  ">
-                            <div class="col-lg-2 col-12">
+                            
+
+                            <div class="col-lg-3 col-12">
                                 <div class="uploader">
-                                    <input type="file" id="Coverimage" name="filename">
+                                    <input type="file" id="Coverimage" name="filename" required>
                                     <label for="formimg-upload" class="formimg-upload">Upload cover (270 x 400)</label>
                                 </div>
                             </div>
-                            <div class="col-lg-10">
+                            <div class="col-lg-9">
                                 <div class="item-title  mt-2">
-                                    <input type="text" class="form-control mb-3" placeholder="title">
+                                    <input type="text" id="title" class="form-control mb-3" required placeholder="title">
                                 </div>
                                 <div class="item-description ">
-                                    <textarea class="form-control" placeholder="description" rows="5"
+                                    <textarea class="form-control" id="description" placeholder="description" rows="5"
                                         cols="5"></textarea>
                                 </div>
-                                <div class="row mt-3">
+                                <div class="row mt-3 ">
                                     <div class="col-lg-3 col-12">
                                         <div class="item-Releaseyear ">
-                                            <input type="text" class="form-control"
+                                            <input type="number" id="relaseyear" required class="form-control"
                                                 placeholder="Release year"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="item-duration ">
-                                            <input type="text" class="form-control"
+                                            <input type="time" id="runningtime" class="form-control"
                                                 placeholder="Running timed in minutes"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-12">
                                         <div class="item-qulity">
                                             <div class="form-group">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option selected>choose quility</option>
+                                                <select class="form-control" id="quility"  required> 
+                                                    <option  value="" selected>choose quility</option>
                                                     <option>Full HD</option>
                                                     <option>HD</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-lg-3 col-12">
                                         <div class="item-age ">
-                                            <input type="text" class="form-control" placeholder="Age"></textarea>
+                                            <input type="number"  id="age" class="form-control" required placeholder="Age"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12 ">
                                         <div class="country">
-                                            <select class="form-control" id="exampleFormControlSelect2">
+                                            <select class="form-control" id="country">
                                                 <option selected>Choose country / countries</option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
@@ -457,8 +460,8 @@
                                     <div class="col-lg-4 col-12 ">
                                         <div class="item-genra">
                                             <div class="form-group">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option selected>Choose genre / genres</option>
+                                                <select class="form-control" id="genres" required>
+                                                    <option value="" selected>Choose genre / genres</option>
                                                     <option value="Action">Action</option>
                                                     <option value="Adventure">Adventure</option>
                                                     <option value="Animation">Animation</option>
@@ -470,12 +473,48 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 pt-2 ">
-                                        <a href="#"><i class="fa fa-plus-circle pinkicon" style="font-size: 30px !important;" aria-hidden="true"></i> </a>
+                                    <div class="col-lg-2 pt-2 d-none ">
+                                        <a href="#"><i class="fa fa-plus-circle pinkicon"
+                                                style="font-size: 30px !important;" aria-hidden="true"></i> </a>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="imagesuploader">
+                                            <input type="file" id="file-uploader" required multiple>
+                                            <div class="uploadcontent">
+                                                <label>Upload photos</label>
+                                                <span id="files"></span>
+                                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
+                        <div class="d-flex itemtype mt-4">
+                            <span class="pr-2">Item type:</span>
+                            <p>
+                                <input type="radio" id="movuebtn" value="Movie" name="type" checked>
+                                <label for="movuebtn">Movie</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="tvseries" value="tvseries" name="type">
+                                <label for="tvseries">TV Series</label>
+                            </p>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <div class="videouploader">
+                                <input type="file" name="file" required id="file-uploader2">
+                                <div class="uploadcontent">
+                                    <label>Upload video</label>
+                                    <span id="files2"></span>
+
+                                    <i class="fa fa-file-video-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                            <button id="publish" class="mt-4" type="submit">publish</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -483,22 +522,20 @@
     </section>
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../node_modules/owl.carousel/dist/owl.carousel.js"></script>
     <script src="../script/lightbox/lightbox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-    <script src="../script/main.js"></script>
-    <script src="../script/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script src="../script/firebase.js"></script>    
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../script/Custom.js"></script>
+    <script src="../script/Stream.js"></script>
     <script>
-        $("#nav-dropdown").on("click", function () {
-            $(".pages-dropdown").slideToggle();
 
-        })
         $('document').ready(function () {
             $("#Coverimage").change(function () {
                 if (this.files && this.files[0]) {
@@ -509,6 +546,25 @@
 
                 }
             });
+        });
+        const fileUploader = document.getElementById('file-uploader');
+        const fileUploader2 = document.getElementById('file-uploader2');
+
+        fileUploader.addEventListener('change', (event) => {
+            const files = event.target.files;
+      
+            // show the upload feedback
+            const feedback = document.getElementById('files');
+            const msg = `${files.length} file(s) uploaded successfully!`;
+            feedback.innerHTML = msg;
+        });
+        fileUploader2.addEventListener('change', (event) => {
+            const files = event.target.files;
+         
+            // show the upload feedback
+            const feedback = document.getElementById('files2');
+            const msg = `${files.length} file(s) uploaded successfully!`;
+            feedback.innerHTML = msg;
         });
     </script>
 </body>
